@@ -37,4 +37,4 @@ server = [ "dep:http", "dep:hyper" ]
 test-harness = [ "proxmox-schema/test-harness" ]
 
 [patch.crates-io]
-rustyline = { path = "https://github.com/jiangcuo/rustyline.git" ,rev = "ae538291a6c1798505b3fd7b0b7a535362656589"}
+rustyline = { git = "https://github.com/jiangcuo/rustyline.git" , rev = "ae538291a6c1798505b3fd7b0b7a535362656589" }
