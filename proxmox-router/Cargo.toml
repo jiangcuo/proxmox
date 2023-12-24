@@ -22,7 +22,7 @@ unicode-width ="0.1.8"
 
 # cli:
 tokio = { workspace = true, features = [], optional = true }
-rustyline = { version = "9", optional = true }
+rustyline = { version = "13", optional = true }
 libc = { workspace = true, optional = true }
 
 proxmox-lang.workspace = true
@@ -35,3 +35,6 @@ default = [ "cli", "server" ]
 cli = [ "dep:env_logger", "dep:libc", "dep:rustyline", "dep:tokio" ]
 server = [ "dep:http", "dep:hyper" ]
 test-harness = [ "proxmox-schema/test-harness" ]
+
+[patch.crates-io]
+rustyline = { path = "https://github.com/jiangcuo/rustyline.git" }
